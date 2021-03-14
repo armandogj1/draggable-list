@@ -45,11 +45,11 @@ ul {
 }
 
 li {
-  height: 30px;
+  /* height: 30px; */
   width: 200px;
   background-color: aqua;
   text-align: center;
-  line-height: 30px;
+  /* line-height: 30px; */
   margin-bottom: 1em;
 }
 

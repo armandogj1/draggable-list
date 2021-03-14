@@ -1,8 +1,6 @@
 import { useState } from 'react';
 
-const list = [{ val: 'a' }, { val: 'b' }, { val: 'c' }, { val: 'd' }, { val: 'e' }];
-
-const List = () => {
+const List = ({ list, render }) => {
   const [items, setItems] = useState(list);
   const [dragged, setDragged] = useState(null);
   const [position, setPosition] = useState({ idx: -1 });
@@ -49,7 +47,7 @@ const List = () => {
     >
       {items.map((li, idx) => (
         <li key={idx} data-element={idx} draggable onDrag={handleDragStart}>
-          {li.val}
+          {render(li)}
         </li>
       ))}
     </ul>
